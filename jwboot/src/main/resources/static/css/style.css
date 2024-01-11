@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.wrap{
+	width: 1000px;
+	height: 1000px;
+}
+.lake{
+	height: 700px;
+	width : 800px;
+}
+h1{font-size: 300;}

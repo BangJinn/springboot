@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;jwboot/src/main/resources/static/images/lake_forest_snow_130421_2667x4000.jpg&apos; to &apos;lake.jpg&apos;" description="Rename resource &apos;lake_forest_snow_130421_2667x4000.jpg&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/static/images/lake_forest_snow_130421_2667x4000.jpg" name="lake.jpg" stamp="1704955880124" updateReferences="true"/>
+</session>
