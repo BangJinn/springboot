@@ -1,10 +1,35 @@
 @charset "UTF-8";
 .wrap{
-	width: 1000px;
-	height: 1000px;
+	text-align: center;
 }
 .lake{
 	height: 700px;
 	width : 800px;
 }
-h1{font-size: 300;}
+h1{font-size: 300; color: red;}
+a{text-decoration: none;}
+
+.tdl_write{
+	width: 600px;
+	margin: 0 auto;
+	border-collapse: collapse;
+	
+}
+.tdl_write th{
+	border: 2px solid #008080; padding: 7px;
+}
+
+.tdl_write td{
+	border: 2px solid #008080; padding: 7px;
+}
+.tdl_write input[type = "text"]{
+	width: 600px;
+	height: 25px;
+	border: 2px solid #008080; padding: 7px;
+}
+.tdl_write textarea{
+	width: 580px;
+	height: 400px;
+	border: 2px solid #008080; padding: 7px;
+	resize: none;   
+}
