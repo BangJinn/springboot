@@ -48,6 +48,7 @@ public class Member {
 		
 		//빌더로 생성
 		Member member = Member.builder()
+				.id(memberDTO.getId())
 				.memberEmail(memberDTO.getMemberEmail())
 				.memberPassword(memberDTO.getMemberPassword())
 				.memberName(memberDTO.getMemberName())

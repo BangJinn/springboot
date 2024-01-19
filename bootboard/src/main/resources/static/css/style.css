@@ -6,8 +6,7 @@ ul li{list-style: none; margin: 16px;}
 a{text-decoration: none;}
 
 /* index 스타일 */
-.lake-box{margin : 0 auto; text-align: center;}
-.lake{ width: 1000px; height: 1000px;}
+.lake{text-align: center; width: 800px; height: 800px; margin: 0 auto;}
 .menu{text-align: center;}
 
 /* join 스타일 */
@@ -15,11 +14,15 @@ a{text-decoration: none;}
 .joinform label{width: 100px; float: left;}
 .joinform input{padding: 4px;}
 
-/* memberlist 스타일 */
-.memberlist{width: 700px; margin: 0 auto;
+/* tbl_list 스타일 */
+.tbl_list{width: 700px; margin: 0 auto;
    border-collapse: collapse;}
-.memberlist th, td{border: 1px solid #ccc; padding: 8px;
+.tbl_list th, td{border: 1px solid #ccc; padding: 8px;
   text-align: center;}
+.tbl_list input[type="text"]{width: 680px; height: 25px}
+.tbl_list textarea{width: 680px; height: 300px}
+.pagination{padding : 6px; text-align: center;}
+.btn_write{text-align: center;}
 
 /* member detail 스타일 */  
 .detail{width: 420px; margin: 0 auto;}
@@ -29,11 +32,6 @@ a{text-decoration: none;}
 /* login 스타일 */
 .error{color: #f00; font-size: 0.9em}
 
-/* tbl_list 스타일 */
-.tbl_list{width: 700px; margin: 0 auto;
-   border-collapse: collapse;}
-.tbl_list th, td{border: 1px solid #ccc; padding: 8px;
-  text-align: center;}
-.tbl_list input[type="text"]{width: 680px; height: 25px}
-.tbl_list textarea{width: 680px; height: 300px}
+.writeform{width: 800px; margin: 0 auto;}
+.alert-danger{padding-left: 60px; color: #b00;}
   

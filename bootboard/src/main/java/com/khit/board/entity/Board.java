@@ -1,8 +1,5 @@
 package com.khit.board.entity;
 
-
-import java.time.LocalDateTime;
-
 import com.khit.board.dto.BoardDTO;
 
 import jakarta.persistence.Column;
@@ -14,48 +11,62 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Data
 @Table(name = "tbl_board")
-@Entity
-public class Board extends BaseEntity{
-
-	@Id		//프라이머리 키
+@Entity   
+public class Board extends BaseEntity{ //테이블이 생성되는 역할을 하는 클래스
+	@Id   //pk
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column
+	
+	@Column(nullable = false)
 	private String boardTitle;
-	@Column
+	
+	@Column(length = 30, nullable = false)
 	private String boardWriter;
-	@Column
+	
+	@Column(length = 2000, nullable = false)
 	private String boardContent;
+	
 	@Column
 	private Integer boardHits;
 	
+	@Column
+	private String filename;
+	
+	@Column
+	private String filepath;
 	
 	//dto를 entity로 변환하는 정적 메서드
-	public static Board toSaveEntity(BoardDTO boaraDTO) {
+	public static Board toSaveEntity(BoardDTO boardDTO) {
 		Board board = Board.builder()
-				.id(boaraDTO.getId())
-				.boardTitle(boaraDTO.getBoardTitle())
-				.boardWriter(boaraDTO.getBoardWriter())
-				.boardContent(boaraDTO.getBoardContent())
+				.boardTitle(boardDTO.getBoardTitle())
+				.boardWriter(boardDTO.getBoardWriter())
+				.boardContent(boardDTO.getBoardContent())
+				.filename(boardDTO.getFilename())
+				.filepath(boardDTO.getFilepath())
 				.boardHits(0)
 				.build();
 		return board;
 	}
 	
-	public static Board toUpdateEntity(BoardDTO boaraDTO) {
+	//dto를 entity로 수정하여 변환하는 정적 메서드
+	public static Board toUpdateEntity(BoardDTO boardDTO) {
 		Board board = Board.builder()
-				.id(boaraDTO.getId())
-				.boardTitle(boaraDTO.getBoardTitle())
-				.boardWriter(boaraDTO.getBoardWriter())
-				.boardContent(boaraDTO.getBoardContent())
-				.boardHits(boaraDTO.getBoardHits())
+				.id(boardDTO.getId())
+				.boardTitle(boardDTO.getBoardTitle())
+				.boardWriter(boardDTO.getBoardWriter())
+				.boardContent(boardDTO.getBoardContent())
+				.filename(boardDTO.getFilename())
+				.filepath(boardDTO.getFilepath())
+				.boardHits(boardDTO.getBoardHits())
 				.build();
 		return board;
 	}
